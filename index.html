@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    *{margin:0;padding:0;box-sizing:border-box;user-select:none}
+    body{height:100vh;background-color:#9CBAD0;text-align:center;font-family:"Inter";overscroll-behavior:none;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center}
+    .row{width:100%;min-width:1050px;height:200px;display:flex;align-items:center;justify-content:center}
+    .row:first-of-type{top:16px}.row:last-of-type{bottom:16px}
+    .project{display:block;transition:0.5s;width:150px;height:150px;transform:rotate(10deg);border-radius:20%;background:white;margin:0 30px;background-position:center;}
+    .project:hover{transform:rotate(-10deg);box-shadow:inset 0 -80px 50px -50px black;transition:0.5s}
+    .project::after{content:attr(desc);opacity:0;transition:0.5s;color:white;font-weight:bold;user-select:all;position:absolute;bottom:0;width:150px;left:0;}
+    .project:hover::after{opacity:1;transition:0.5s}
+    .project:not([desc="Empty. For now."]){cursor:pointer}
+    .project[desc="Node.js Blackjack"]::after{font-size:.9em}
+  </style>
+</head>
+<body>
+  <div class="row">
+    <a class="project" href="https://danik00111.github.io/portfolio" desc="This Here Page" style="background-image:url(./img/this.png);"></a>
+    <a class="project" desc="Empty. For now."></a>
+    <a class="project" desc="Empty. For now."></a>
+    <a class="project" href="https://danik00111.github.io/js-mega-folder/vol2/a-yathzee/index.js" desc="Node.js Yathzee" style="background-image:url(./img/njy.png)"></a>
+    <a class="project" desc="Empty. For now."></a>
+  </div>
+  <div id="text">
+    <h1>danik0011's portfolio</h1>
+    <p>Here, you will find a list of some of the projects I made, and links to try them out.</p>
+  </div>
+  <div class="row">
+    <a class="project" href="https://danik00111.github.io/js-mega-folder/vol2/j-ackblack/index.js" desc="Node.js Blackjack" style="background-image:url(./img/njbj.png)"></a>
+    <a class="project" desc="Empty. For now."></a>
+    <a class="project" href="https://danik00111.github.io/mines-weppeer" desc="JS Minesweeper" style="background-image:url(./img/jsms.png)"></a>
+    <a class="project" desc="Empty. For now."></a>
+    <a class="project" href="https://danik00111.github.io/js-mega-folder/vol2/l-2048/index.html" desc="JS 2048" style="background-image:url(./img/js2048.png)"></a>
+  </div>
+</body>
+</html>
